@@ -1,0 +1,27 @@
+{
+  "name": "web-resume",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/acadet/web-resume.git"
+  },
+  "author": "Adrien Cadet",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/acadet/web-resume/issues"
+  },
+  "homepage": "https://github.com/acadet/web-resume#readme",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-concurrent": "^2.2.1",
+    "grunt-contrib-coffee": "^1.0.0",
+    "grunt-contrib-jade": "^1.0.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-sass": "^1.1.0"
+  }
+}

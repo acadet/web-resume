@@ -1,0 +1,16 @@
+{
+  "name": "web-resume",
+  "authors": [
+    "Adrien Cadet <acadet@live.fr>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "devDependencies": {
+    "bourbon": "^4.2.6",
+    "jquery": "^2.2.1"
+  }
+}
