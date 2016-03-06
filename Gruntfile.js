@@ -17,6 +17,7 @@ module.exports = function (grunt) {
                 },
                 files: {
                     'build/all.js': [
+                        'coffee/base_presenter.coffee',
                         'coffee/home_presenter.coffee'
                     ]
                 }
@@ -69,7 +70,7 @@ module.exports = function (grunt) {
             }
         },
         concurrent: {
-            assets: {
+            dist: {
                 tasks: ['watch:coffee', 'watch:sass', 'watch:jade'],
                 options: {
                     logConcurrentOutput: true,

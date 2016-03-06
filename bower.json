@@ -10,7 +10,6 @@
   "homepage": "",
   "private": true,
   "devDependencies": {
-    "bourbon": "^4.2.6",
-    "jquery": "^2.2.1"
+    "bourbon": "^4.2.6"
   }
 }
