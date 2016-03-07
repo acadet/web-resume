@@ -1,0 +1,26 @@
+$headline: 'lovelo_black';
+
+@font-face {
+  font-family: $headline;
+  src: url('fonts/Lovelo Black.eot'); /* IE9 Compat Modes */
+  src: url('fonts/Lovelo Black.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('fonts/Lovelo Black.woff') format('woff'), /* Modern Browsers */ url('fonts/Lovelo Black.ttf') format('truetype'), /* Safari, Android, iOS */ url('fonts/Lovelo Black.svg#d635c659d9a9556206b3c3c92a541825') format('svg'); /* Legacy iOS */
+  font-style: normal;
+  font-weight: 400;
+}
+
+$body: 'gandhi_sans';
+
+@font-face {
+  font-family: $body;
+  src: url('fonts/GandhiSans-Regular.eot'); /* IE9 Compat Modes */
+  src: url('fonts/GandhiSans-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('fonts/GandhiSans-Regular.woff') format('woff'), /* Modern Browsers */ url('fonts/GandhiSans-Regular.ttf') format('truetype'), /* Safari, Android, iOS */ url('fonts/GandhiSans-Regular.svg#c36b72be77a1f66294b28bda9d50204e') format('svg'); /* Legacy iOS */
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: $body;
+  src: url('fonts/GandhiSans-Bold.eot'); /* IE9 Compat Modes */
+  src: url('fonts/GandhiSans-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('fonts/GandhiSans-Bold.woff') format('woff'), /* Modern Browsers */ url('fonts/GandhiSans-Bold.ttf') format('truetype'), /* Safari, Android, iOS */ url('fonts/GandhiSans-Bold.svg#48d25804ec69ca8731ea88896359a881') format('svg'); /* Legacy iOS */
+  font-weight: bold;
+}

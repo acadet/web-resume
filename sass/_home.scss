@@ -87,7 +87,7 @@
   h2, h3, h4, h5, h6, p {
     color: $black;
     font: {
-      family: 'Gandhi Sans';
+      family: $body;
     }
   }
 
@@ -95,7 +95,7 @@
     margin: 0;
 
     font: {
-      family: "Lovelo";
+      family: $headline;
       size: 1.6rem;
     }
 
