@@ -95,7 +95,7 @@
     overflow: hidden;
     background-color: #fff;
     box-shadow: 0 0.5rem 0.5rem 0 rgba(35, 36, 34, 0.5); }
-    @media all and (max-width: 1270px) {
+    @media screen and (max-width: 1270px) {
       .main-wrapper .resume {
         width: 100%;
         height: auto;
@@ -116,7 +116,7 @@
   flex: 1;
   padding: 0 1rem;
   border-right: 1px solid #eee; }
-  @media all and (max-width: 1270px) {
+  @media screen and (max-width: 1270px) {
     .resume .column {
       border: none; } }
   .resume .column:nth-child(2) {
@@ -158,7 +158,7 @@
     margin: .5rem;
     padding: 0;
     list-style-type: none; }
-    @media all and (max-width: 420px) {
+    @media screen and (max-width: 420px) {
       .resume .column .details {
         list-style-type: disc; } }
     .resume .column .details li {
@@ -170,7 +170,7 @@
         display: inline-block;
         vertical-align: middle;
         margin: 0; }
-      @media all and (max-width: 420px) {
+      @media screen and (max-width: 420px) {
         .resume .column .details li img {
           display: none; } }
       .resume .column .details li p {
@@ -196,7 +196,7 @@
   margin: 1rem 0;
   padding: 1rem;
   border: 1px #eee solid; }
-  @media all and (min-width: 1270px) {
+  @media screen and (min-width: 1270px) {
     .work-experiences .experience:first-child, .a-cotes .experience:first-child {
       margin-top: 0; }
     .work-experiences .experience:last-child, .a-cotes .experience:last-child {
