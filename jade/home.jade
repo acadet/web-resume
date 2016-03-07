@@ -1,13 +1,13 @@
 doctype
 html
   head
-    title My web resumé - Adrien Cadet
+    title My Web Resumé - Adrien Cadet
 
     meta(charset = 'utf-8')
     meta(content = 'IE=edge;chrome=1', "http-equiv"= 'X-UA-Compatible')
     meta(name='viewport', content = 'width=device-width, initial-scale=1')
-    meta(name= 'description', content = "'Cause InDesign was so annoying.")
-    meta(name= 'keywords', content = 'Adrien, Cadet, software, engineer, San, Francisco, ')
+    meta(name= 'description', content = "'Cause InDesign was too annoying.")
+    meta(name= 'keywords', content = 'Adrien, Cadet, software, engineer, San, Francisco, mobile, web, Android, Swift, iOS, chocolate, flowers, beers, travel')
 
     link(rel='stylesheet', type='text/css', href= 'all.css')
 
@@ -16,3 +16,106 @@ html
     script(type= 'text/javascript').
       var presenter = new HomePresenter()
   body
+    .main-wrapper
+      .resume
+
+        .column
+          h1
+            | http://
+            span.highlight AdrienCadet
+            | .com
+
+          h3 Software Engineer
+
+          ul.details
+            li
+              img(src='age.png')
+              p 22
+            li
+              img(src='location.png')
+              p San Francisco, USA
+            li
+              img(src='email.png')
+              p acadet@live.fr
+            li
+              img(src='phone.png')
+              p +1 415-318-9933
+
+          h2 — Work Experiences
+
+          .work-experiences
+            .experience
+              h4 Software Engineer at Coshx Labs
+              h5 Since Nov 2014 – San Francisco, USA
+              ul.skill-scheme
+                li.android
+                li.ios
+                li.rails
+                li.html
+                li.coffeescript
+                li.javascript
+                li.dbms
+              p
+                | Coshx Labs is a dev shop offering development and consulting services.
+                | I am mostly building mobile applications, for both iOS and Android,
+                | but I engineer websites and APIs every so often.
+                | I was an Android consultant several itmes.
+                br
+                | In the meantime, I am participating to project management and regularly
+                | posting on the Coshx blog.
+
+            .experience
+              h4 Intern at Sopra
+              h5 Feb - Aug 2014 – Bordeaux, France
+              ul.skill-scheme
+                li.net
+                li.javascript
+                li.dbms
+              p
+                | Innovative internship which targeted to engineer a dashboard for military ships.
+                | I designed the whole solution, which includes some internal frameworks and libraries,
+                | especially for supporting touch interactions.
+
+        .column
+          .work-experiences
+
+            .experience
+              h4 Intern at Hex Digital
+              h5 Jun - Sept 2013 – London, UK
+              ul.skill-scheme
+                li.php
+                li.codeigniter
+                li.javascript
+                li.dbms
+                li.html
+              p
+                | Front-end and back-end development of websites. I contributed to project management too.
+
+          h2 – Les À-Côtés
+
+          .a-cotes
+            .experience
+              h4 Volunteer teacher at Rails School
+              h5 Since Mar 2015 — San Francisco, USA
+              ul.skill-scheme
+                li.ios
+                li.javascript
+                li.rails
+                li.kotlin
+              p
+                | I am teaching classes at the Rails School about several topics such as classic algorithms,
+                | new technologies, web and mobile development. I am also a regular student.
+
+            .experience
+              h4 Intern at Hex Digital
+              h5 Jun - Sept 2013 – London, UK
+              ul.skill-scheme
+                li.php
+                li.codeigniter
+                li.javascript
+                li.dbms
+                li.html
+              p
+                | Front-end and back-end development of websites. I contributed to project management too.
+
+        .column

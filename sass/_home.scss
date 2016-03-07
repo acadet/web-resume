@@ -1,0 +1,106 @@
+.main-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  @include display(flex);
+  @include justify-content(center);
+
+  background: tomato;
+
+  .resume {
+    width: 297mm;
+    height: 210mm;
+    box-sizing: border-box;
+    padding: 12.7mm;
+    @include display(flex);
+    overflow: hidden;
+
+    background-color: $white;
+  }
+}
+
+.resume .column {
+  @include flex(1);
+  padding: 0 1rem;
+
+  border-right: 1px solid $grey;
+
+  &:last-child {
+    border-right: none;
+  }
+
+  h2, h3, h4, h5, h6, p {
+    color: $black;
+    font: {
+      family: 'Gandhi Sans';
+    }
+  }
+
+  h1 {
+    margin: 0;
+
+    font: {
+      family: "Lovelo";
+      size: 1.6rem;
+    }
+    color: $grey;
+
+    .highlight {
+      color: $black;
+    }
+  }
+
+  h3 {
+    margin: .5rem 0;
+
+    font: {
+      size: 1.1rem;
+      weight: normal;
+    }
+  }
+
+  .details {
+    margin: .5rem;
+    padding: 0;
+    list-style-type: none;
+
+    li {
+      margin: 0 0 .5rem 0;
+      padding: 0;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      img, p {
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0;
+      }
+
+      p {
+        margin: {
+          left: .5rem;
+          right: .5rem;
+        }
+
+        font: {
+          size: .9rem;
+        }
+      }
+    }
+  }
+
+  h2 {
+    margin: 1rem .5rem;
+    font: {
+      size: 1.2rem;
+    }
+  }
+}
+
+@import "work_experiences";
