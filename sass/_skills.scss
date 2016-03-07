@@ -1,0 +1,52 @@
+.skills {
+  h4 {
+    margin: .5rem 1rem;
+
+    font: {
+      size: .9rem;
+      weight: normal;
+    }
+    text-align: center;
+  }
+
+  .list {
+    margin: 0;
+    padding: .5rem;
+    @include display(flex);
+    @include flex-wrap(wrap);
+
+    list-style-type: none;
+    border: 1px solid $grey;
+
+    li {
+      margin: .2rem 0;
+      padding: 0;
+
+      div, p {
+        display: inline-block;
+        vertical-align: middle;
+      }
+
+      div {
+        width: 1rem;
+        height: 1rem;
+
+        @each $p in $skills-color {
+          &.#{nth($p, 1)} {
+            background-color: nth($p, 2);
+          }
+        }
+      }
+
+      p {
+        margin: 0 .5rem 0 0;
+
+        font: {
+          size: .7rem;
+          weight: bold;
+        }
+        text-transform: uppercase;
+      }
+    }
+  }
+}
