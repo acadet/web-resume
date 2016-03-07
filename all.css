@@ -1,3 +1,29 @@
+@font-face {
+  font-family: "lovelo_black";
+  src: url("fonts/Lovelo Black.eot");
+  /* IE9 Compat Modes */
+  src: url("fonts/Lovelo Black.eot?#iefix") format("embedded-opentype"), url("fonts/Lovelo Black.woff") format("woff"), url("fonts/Lovelo Black.ttf") format("truetype"), url("fonts/Lovelo Black.svg#d635c659d9a9556206b3c3c92a541825") format("svg");
+  /* Legacy iOS */
+  font-style: normal;
+  font-weight: 400; }
+
+@font-face {
+  font-family: "gandhi_sans";
+  src: url("fonts/GandhiSans-Regular.eot");
+  /* IE9 Compat Modes */
+  src: url("fonts/GandhiSans-Regular.eot?#iefix") format("embedded-opentype"), url("fonts/GandhiSans-Regular.woff") format("woff"), url("fonts/GandhiSans-Regular.ttf") format("truetype"), url("fonts/GandhiSans-Regular.svg#c36b72be77a1f66294b28bda9d50204e") format("svg");
+  /* Legacy iOS */
+  font-style: normal;
+  font-weight: 400; }
+
+@font-face {
+  font-family: "gandhi_sans";
+  src: url("fonts/GandhiSans-Bold.eot");
+  /* IE9 Compat Modes */
+  src: url("fonts/GandhiSans-Bold.eot?#iefix") format("embedded-opentype"), url("fonts/GandhiSans-Bold.woff") format("woff"), url("fonts/GandhiSans-Bold.ttf") format("truetype"), url("fonts/GandhiSans-Bold.svg#48d25804ec69ca8731ea88896359a881") format("svg");
+  /* Legacy iOS */
+  font-weight: bold; }
+
 .download {
   z-index: 2;
   position: absolute;
@@ -69,6 +95,12 @@
     overflow: hidden;
     background-color: #fff;
     box-shadow: 0 0.5rem 0.5rem 0 rgba(35, 36, 34, 0.5); }
+    @media all and (max-width: 1270px) {
+      .main-wrapper .resume {
+        width: 100%;
+        height: auto;
+        display: block;
+        overflow: auto; } }
     @media print {
       .main-wrapper .resume {
         margin: 0;
@@ -84,6 +116,9 @@
   flex: 1;
   padding: 0 1rem;
   border-right: 1px solid #eee; }
+  @media all and (max-width: 1270px) {
+    .resume .column {
+      border: none; } }
   .resume .column:nth-child(2) {
     -webkit-box-flex: 0.7;
     -moz-box-flex: 0.7;
@@ -96,10 +131,10 @@
     border-right: none; }
   .resume .column h2, .resume .column h3, .resume .column h4, .resume .column h5, .resume .column h6, .resume .column p {
     color: #232422;
-    font-family: 'Gandhi Sans'; }
+    font-family: "gandhi_sans"; }
   .resume .column h1 {
     margin: 0;
-    font-family: "Lovelo";
+    font-family: "lovelo_black";
     font-size: 1.6rem; }
     .resume .column h1 a {
       color: #eee;
@@ -123,6 +158,9 @@
     margin: .5rem;
     padding: 0;
     list-style-type: none; }
+    @media all and (max-width: 420px) {
+      .resume .column .details {
+        list-style-type: disc; } }
     .resume .column .details li {
       margin: 0 0 .5rem 0;
       padding: 0; }
@@ -132,6 +170,9 @@
         display: inline-block;
         vertical-align: middle;
         margin: 0; }
+      @media all and (max-width: 420px) {
+        .resume .column .details li img {
+          display: none; } }
       .resume .column .details li p {
         margin-left: .5rem;
         margin-right: .5rem;
@@ -155,10 +196,11 @@
   margin: 1rem 0;
   padding: 1rem;
   border: 1px #eee solid; }
-  .work-experiences .experience:first-child, .a-cotes .experience:first-child {
-    margin-top: 0; }
-  .work-experiences .experience:last-child, .a-cotes .experience:last-child {
-    margin-bottom: 0; }
+  @media all and (min-width: 1270px) {
+    .work-experiences .experience:first-child, .a-cotes .experience:first-child {
+      margin-top: 0; }
+    .work-experiences .experience:last-child, .a-cotes .experience:last-child {
+      margin-bottom: 0; } }
 
 .work-experiences h4, .a-cotes h4 {
   margin: .5rem 0;
@@ -174,7 +216,7 @@
 .work-experiences p, .a-cotes p {
   margin: 1rem 0 0 0;
   font-size: .8rem;
-  line-height: 1rem;
+  line-height: 1.1rem;
   text-align: justify; }
 
 .work-experiences .skill-scheme, .a-cotes .skill-scheme {
