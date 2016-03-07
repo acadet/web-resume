@@ -29,6 +29,10 @@
 
   border-right: 1px solid $grey;
 
+  &:nth-child(2) {
+    @include flex(.7);
+  }
+
   &:last-child {
     border-right: none;
   }
@@ -128,7 +132,7 @@
   }
 
   h2 {
-    margin: 1rem .5rem;
+    margin: 1rem .5rem .5rem .5rem;
     font: {
       size: 1.2rem;
     }
@@ -137,3 +141,5 @@
 
 @import "work_experiences";
 @import "skills";
+@import "proficiency";
+@import "education";
