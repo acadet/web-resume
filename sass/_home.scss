@@ -9,17 +9,19 @@
   @include display(flex);
   @include justify-content(center);
 
-  background: tomato;
+  @include background-image(linear-gradient(90deg, #B993D6, #8CA6DB));
 
   .resume {
     width: 297mm;
     height: 210mm;
     box-sizing: border-box;
     padding: 12.7mm;
+    margin: 4rem;
     @include display(flex);
     overflow: hidden;
 
     background-color: $white;
+    box-shadow: 0 .5rem .5rem 0 transparentize($black, 50%);
   }
 }
 
@@ -143,3 +145,4 @@
 @import "skills";
 @import "proficiency";
 @import "education";
+@import "hobbies";
