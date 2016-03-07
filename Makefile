@@ -7,7 +7,8 @@ build:
 	cd src; npm install; bower install; grunt
 	cp -a src/build/. .
 	cp -a src/imgs/ imgs/
+	cp -a src/fonts/ fonts/
 	rm -rf src
 
 clean:
-	rm -rf src index.html all.css all.js imgs
+	rm -rf src/ index.html all.css all.js imgs/ fonts/
