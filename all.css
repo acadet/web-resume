@@ -24,20 +24,26 @@
   /* Legacy iOS */
   font-weight: bold; }
 
-.download {
+.github, .download {
   z-index: 2;
   position: absolute;
   top: 0;
-  right: 0;
   width: 32px;
   height: 32px;
-  margin: 1rem;
-  background-image: url("imgs/download.png"); }
-  .download:hover {
+  margin: 1rem; }
+  .github:hover, .download:hover {
     opacity: .65; }
   @media print {
-    .download {
+    .github, .download {
       display: none; } }
+
+.github {
+  left: 0;
+  background-image: url("imgs/github.png"); }
+
+.download {
+  right: 0;
+  background-image: url("imgs/download.png"); }
 
 .main-wrapper {
   z-index: 1;
