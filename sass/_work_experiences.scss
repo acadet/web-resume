@@ -4,12 +4,14 @@
     padding: 1rem;
     border: 1px $grey solid;
 
-    &:first-child {
-      margin-top: 0;
-    }
+    @media all and (min-width: 1270px) {
+      &:first-child {
+        margin-top: 0;
+      }
 
-    &:last-child {
-      margin-bottom: 0;
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
   }
 
@@ -35,7 +37,7 @@
     font: {
       size: .8rem;
     }
-    line-height: 1rem;
+    line-height: 1.1rem;
     text-align: justify;
   }
 
