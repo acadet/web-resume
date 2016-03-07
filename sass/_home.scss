@@ -52,7 +52,7 @@
     background-color: $white;
     box-shadow: 0 .5rem .5rem 0 transparentize($black, .5);
 
-    @media all and (max-width: 1270px) {
+    @media screen and (max-width: 1270px) {
       width: 100%;
       height: auto;
       display: block;
@@ -72,7 +72,7 @@
 
   border-right: 1px solid $grey;
 
-  @media all and (max-width: 1270px) {
+  @media screen and (max-width: 1270px) {
     border: none;
   }
 
@@ -135,7 +135,7 @@
     padding: 0;
     list-style-type: none;
 
-    @media all and (max-width: 420px) {
+    @media screen and (max-width: 420px) {
       list-style-type: disc;
     }
 
@@ -154,7 +154,7 @@
       }
 
       img {
-        @media all and (max-width: 420px) {
+        @media screen and (max-width: 420px) {
           display: none;
         }
       }

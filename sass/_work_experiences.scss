@@ -4,7 +4,7 @@
     padding: 1rem;
     border: 1px $grey solid;
 
-    @media all and (min-width: 1270px) {
+    @media screen and (min-width: 1270px) {
       &:first-child {
         margin-top: 0;
       }
