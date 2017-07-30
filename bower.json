@@ -1,7 +1,7 @@
 {
   "name": "web-resume",
   "authors": [
-    "Adrien Cadet <acadet@live.fr>"
+    "Adrien Cadet"
   ],
   "description": "",
   "main": "",
@@ -10,6 +10,6 @@
   "homepage": "",
   "private": true,
   "devDependencies": {
-    "bourbon": "^4.2.6"
+    "bourbon": "^4.3.4"
   }
 }

@@ -1,3 +1,7 @@
+# Project files
+dev/
+prod/
+
 # TMP files
 .DS_Store
 *~

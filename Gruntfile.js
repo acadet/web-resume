@@ -2,59 +2,88 @@ module.exports = function (grunt) {
     'use strict';
 
     grunt.loadNpmTasks('grunt-contrib-coffee');
-    grunt.loadNpmTasks('grunt-contrib-jade');
+    grunt.loadNpmTasks('grunt-contrib-pug');
     grunt.loadNpmTasks('grunt-sass');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-concurrent');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-copy');
+
+    var coffeeFiles = [
+        'coffee/FIXME.coffee',
+    ];
 
     // Project configuration
     grunt.initConfig({
         coffee: {
-            dist: {
+            dev: {
                 options: {
                     bare: true,
                     join: true
                 },
                 files: {
-                    'build/all.js': [
-                        'coffee/base_presenter.coffee',
-                        'coffee/home_presenter.coffee'
-                    ]
+                    'dev/all.js': coffeeFiles
+                }
+            },
+            prod: {
+                options: {
+                    bare: true,
+                    join: true
+                },
+                files: {
+                    'prod/all_original.js': coffeeFiles
                 }
             }
         },
-        jade: {
-            dist: {
+        pug: {
+            dev: {
                 options: {
                     pretty: true
                 },
                 files: {
-                    'build/index.html': 'jade/home.jade'
+                    'dev/index.html': 'pug/index.pug'
+                }
+            },
+            prod: {
+                options: {
+                    pretty: false
+                },
+                files: {
+                    'prod/index.html': 'pug/index.pug'
                 }
             }
         },
         sass: {
-            dist: {
+            dev: {
                 options: {
                     sourcemap: 'none'
                 },
                 files: {
-                    'build/all.css': 'sass/all.scss'
+                    'dev/all.css': 'sass/all.scss'
+                }
+            },
+            prod: {
+                options: {
+                    sourcemap: 'none',
+                    outputStyle: 'compressed'
+                },
+                files: {
+                    'prod/all.css': 'sass/all.scss'
                 }
             }
         },
         watch: {
             coffee: {
                 files: 'coffee/**/*.coffee',
-                tasks: ['coffee'],
+                tasks: ['coffee:dev'],
                 options: {
                     interrupt: true,
                     atBegin: true
                 }
             },
-            jade: {
-                files: 'jade/**/*.jade',
-                tasks: ['jade'],
+            pug: {
+                files: 'pug/**/*.pug',
+                tasks: ['pug:dev'],
                 options: {
                     interrupt: true,
                     atBegin: true
@@ -62,7 +91,7 @@ module.exports = function (grunt) {
             },
             sass: {
                 files: 'sass/**/*.scss',
-                tasks: ['sass'],
+                tasks: ['sass:dev'],
                 options: {
                     interrupt: true,
                     atBegin: true
@@ -71,19 +100,48 @@ module.exports = function (grunt) {
         },
         concurrent: {
             dist: {
-                tasks: ['watch:coffee', 'watch:sass', 'watch:jade'],
+                tasks: ['watch:coffee', 'watch:sass', 'watch:pug'],
                 options: {
                     logConcurrentOutput: true,
                     limit: 3
                 }
             }
-        }
+        },
+        uglify: {
+            dist: {
+                files: {
+                    'prod/all.js': 'prod/all_original.js'
+                }
+            }
+        },
+        copy: {
+          dev: {
+            src: ['imgs/**', 'favicon/**'],
+            dest: 'dev/',
+            expand: true,
+            flatten: true
+          },
+          prod: {
+            src: ['imgs/**', 'favicon/**'],
+            dest: 'prod/',
+            expand: true,
+            flatten: true
+          },
     });
 
-    // Default task
-    grunt.registerTask('default', [
-        'coffee',
-        'jade',
-        'sass'
+    grunt.registerTask('default', 'concurrent');
+
+    grunt.registerTask('dev', [
+        'coffee:dev',
+        'pug:dev',
+        'sass:dev',
+        'copy:dev',
+    ]);
+
+    grunt.registerTask('prod', [
+        'coffee:prod',
+        'pug:prod',
+        'sass:prod',
+        'copy:prod'
     ]);
 };
