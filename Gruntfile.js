@@ -116,17 +116,14 @@ module.exports = function (grunt) {
         },
         copy: {
           dev: {
-            src: ['imgs/**', 'favicon/**'],
-            dest: 'dev/',
-            expand: true,
-            flatten: true
+            src: ['imgs/**', 'favicon/**', 'fonts/**'],
+            dest: 'dev/'
           },
           prod: {
-            src: ['imgs/**', 'favicon/**'],
-            dest: 'prod/',
-            expand: true,
-            flatten: true
-          },
+            src: ['imgs/**', 'favicon/**', 'fonts/**'],
+            dest: 'prod/'
+          }
+        }
     });
 
     grunt.registerTask('default', 'concurrent');
