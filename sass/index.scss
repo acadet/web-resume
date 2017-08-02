@@ -57,7 +57,7 @@
   @media print {
     width: $resume-width;
     height: $resume-height;
-    @include justify-content(flex-start);
+    display: block;
 
     background: transparent;
   }
@@ -69,6 +69,7 @@
   @include box-sizing(border-box);
   padding: 12.7mm;
   margin: 4rem;
+  overflow: hidden;
 
   background-color: $white;
   box-shadow: 0 .5rem .5rem 0 transparentize($black, .5);

@@ -1,12 +1,18 @@
 .appendix {
   margin: 1rem 0;
   @include display(flex);
-  @include flex-direction(row);
 
   .education, .proficiency {
     @include flex(1);
 
     font-size: .8rem;
+
+    p {
+      margin: .5rem 0;
+
+      font-size: .8rem;
+      line-height: 1.1rem;
+    }
   }
 
   .education {

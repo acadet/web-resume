@@ -14,8 +14,6 @@
 
   .skillset {
     @include display(flex);
-    @include flex-direction(row);
-    @include align-items(stretch);
 
     .set {
       @include flex(1);

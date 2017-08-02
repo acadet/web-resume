@@ -7,22 +7,6 @@
     border: 1px $grey solid;
   }
 
-  h4 {
-    margin: .5rem 0;
-
-    font: {
-      size: .8rem;
-      weight: normal;
-    }
-
-    .title {
-      font: {
-        size: .9rem;
-        weight: bold;
-      }
-    }
-  }
-
   p {
     margin: 1rem 0 0 0;
 
@@ -33,21 +17,43 @@
     text-align: justify;
   }
 
-  .skill-scheme {
-    margin: 0;
-    padding: 0;
+  .experience .header {
+    margin: .5rem 0;
     @include display(flex);
-    @include justify-content(center);
+    @include align-items(center);
 
-    list-style-type: none;
+    h4 {
+      margin: 0 .5rem 0 0;
+      @include flex(1);
 
-    li {
-      width: 1.25rem;
-      height: .5rem;
+      font: {
+        size: .8rem;
+        weight: normal;
+      }
 
-      @each $p in $skills-color {
-        &.#{nth($p, 1)} {
-          background-color: nth($p, 2);
+      .title {
+        font: {
+          size: .9rem;
+          weight: bold;
+        }
+      }
+    }
+
+    .skill-scheme {
+      margin: 0;
+      padding: 0;
+      @include display(flex);
+
+      list-style-type: none;
+
+      li {
+        width: 1.25rem;
+        height: .5rem;
+
+        @each $p in $skills-color {
+          &.#{nth($p, 1)} {
+            background-color: nth($p, 2);
+          }
         }
       }
     }
