@@ -1,0 +1,84 @@
+mixin experience(title, dates, location)
+  h4
+    span.title #{title} 
+    | / #{dates} / #{location}
+
+section.work-experiences
+  
+  h2 — Work Experiences
+  
+  .experience
+    +experience("Android SWE at Lyft", "Since Jun 2016", "San Francisco, USA")
+    ul.skill-scheme
+      li.android
+    p FIXME
+  
+  .experience
+    h4 Software Engineer at Coshx Labs
+    h5 Nov 2014 - Jun 2016 – San Francisco, USA
+    ul.skill-scheme
+      li.android
+      li.ios
+      li.rails
+      li.html
+      li.javascript
+      li.dbms
+    p
+      | Coshx Labs is a dev shop offering development and consulting services.
+      | I am mostly building mobile applications, both iOS and Android,
+      | but I engineer websites and APIs every so often.
+      br
+      | I was an Android consultant several times.
+      | I designed some iOS and Android libraries such as Caravel and Drekkar.
+      br
+      | In the meantime, I am participating to project management and regularly
+      | posting on the Coshx blog.
+
+  //- .experience
+  //-   h4 Intern at Sopra
+  //-   h5 Feb - Aug 2014 – Bordeaux, France
+  //-   ul.skill-scheme
+  //-     li.net
+  //-     li.javascript
+  //-     li.dbms
+  //-   p
+  //-     | Innovative internship which targeted to engineer a dashboard for military ships.
+  //-     | I designed the whole solution, which includes some internal frameworks and libraries,
+  //-     | especially for supporting touch interactions.
+  //-     
+  //- .experience
+  //-   h4 Intern at Hex Digital
+  //-   h5 Jun - Sept 2013 – London, UK
+  //-   ul.skill-scheme
+  //-     li.php
+  //-     li.javascript
+  //-     li.dbms
+  //-     li.html
+  //-   p
+  //-     | Front-end and back-end website development. I contributed to project management too.
+      
+
+section.a-cotes
+  h2 – Les À-Côtés
+  
+  .experience
+    h4 
+      span.title Volunteer teacher at Rails School
+      | – Mar 2015 - Dec 2016 — San Francisco, USA
+    ul.skill-scheme
+      li.ios
+      li.javascript
+      li.rails
+      li.kotlin
+    p
+      | I am teaching classes at the Rails School about several topics such as classic algorithms,
+      | new technologies, web and mobile development. I am also a regular student.
+
+  .experience
+    h4 Hacker at Launch! Festival
+    h5 Mar 2015
+    ul.skill-scheme
+      li.android
+    p
+      | With my 4-person team, we built a website and an Android application within 48 hours.
+      | We were short-listed in the top 15 of the competition, among 130+ teams.

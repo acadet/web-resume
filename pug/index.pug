@@ -13,203 +13,21 @@ html
 
   body
 
-    a(href='https://github.com/acadet/web-resume').github
-    a(href='Adrien_Cadet_Resume.pdf').download
+    .github
+      a(href='https://github.com/acadet/web-resume')
+  
+    .download
+      a(href='Adrien_Cadet_Resume.pdf')
 
     .main-wrapper
       .resume
 
-        .column
-          h1
-            a(href='http://adriencadet.com')
-              | http://
-              span.highlight Adrien Cadet
-              | .com
+        include about
+        
+        include work_experiences
 
-          h3 Software Engineer
+        include skills
 
-          ul.details
-            li
-              img(src='imgs/age.png')
-              p 23
-            li
-              img(src='imgs/pin.png')
-              p San Francisco, USA
-            li
-              img(src='imgs/email.png')
-              p
-                a(href='mailto:acadet@live.fr') acadet@live.fr
-            li
-              img(src='imgs/phone.png')
-              p +1 415-318-9933
-
-          h2 — Work Experiences
-
-          .work-experiences
-            .experience
-              h4 Software Engineer at Coshx Labs
-              h5 Since Nov 2014 – San Francisco, USA
-              ul.skill-scheme
-                li.android
-                li.ios
-                li.rails
-                li.html
-                li.coffeescript
-                li.javascript
-                li.dbms
-              p
-                | Coshx Labs is a dev shop offering development and consulting services.
-                | I am mostly building mobile applications, both iOS and Android,
-                | but I engineer websites and APIs every so often.
-                br
-                | I was an Android consultant several times.
-                | I designed some iOS and Android libraries such as Caravel and Drekkar.
-                br
-                | In the meantime, I am participating to project management and regularly
-                | posting on the Coshx blog.
-
-            .experience
-              h4 Intern at Sopra
-              h5 Feb - Aug 2014 – Bordeaux, France
-              ul.skill-scheme
-                li.net
-                li.javascript
-                li.dbms
-              p
-                | Innovative internship which targeted to engineer a dashboard for military ships.
-                | I designed the whole solution, which includes some internal frameworks and libraries,
-                | especially for supporting touch interactions.
-
-        .column
-          .work-experiences
-
-            .experience
-              h4 Intern at Hex Digital
-              h5 Jun - Sept 2013 – London, UK
-              ul.skill-scheme
-                li.php
-                li.codeigniter
-                li.javascript
-                li.dbms
-                li.html
-              p
-                | Front-end and back-end website development. I contributed to project management too.
-
-          h2 – Les À-Côtés
-
-          .a-cotes
-            .experience
-              h4 Volunteer teacher at Rails School
-              h5 Since Mar 2015 — San Francisco, USA
-              ul.skill-scheme
-                li.ios
-                li.javascript
-                li.rails
-                li.kotlin
-              p
-                | I am teaching classes at the Rails School about several topics such as classic algorithms,
-                | new technologies, web and mobile development. I am also a regular student.
-
-            .experience
-              h4 Hacker at Launch! Festival
-              h5 Mar 2015
-              ul.skill-scheme
-                li.android
-              p
-                | With my 4-person team, we built a website and an Android application within 48 hours.
-                | We were short-listed in the top 15 of the competition, among 130+ teams.
-
-        .column
-
-          h2 – Skills
-
-          .skills
-            h4 I am married to
-            ul.list
-              li
-                .android
-                p Android/JAVA
-              li
-                .coffeescript
-                p Coffeescript
-              li
-                .dbms
-                p DBMS
-              li
-                .html
-                p HTML/CSS
-              li
-                .javascript
-                p JavaScript
-              li
-                .ios
-                p Swift/iOS
-
-            h4 I am pretty skilled for
-            ul.list
-              li
-                .go
-                p Go
-              li
-                .kotlin
-                p Kotlin
-              li
-                .rails
-                p Ruby/RoR
-
-            h4 I used to be good at
-            ul.list
-              li
-                .c
-                p C
-              li
-                .net
-                p C#/.NET
-              li
-                .codeigniter
-                p CodeIgniter
-              li
-                .php
-                p PHP
-              li
-                .python
-                p Python
-              li
-                .typescript
-                p TypeScript
-            h4 Extra
-            ul.list
-              li
-                p Project Management
-              li
-                p Software engineering
-              li
-                p UX Design
-
-          h2 — Proficiency
-
-          ul.proficiency
-            li
-              p French - Native
-            li
-              p English - Fluent
-            li
-              p Spanish - Fairly command
-
-          h2 — Education
-
-          ul.education
-            li
-              p.
-                ENSEIRB MATMECA
-                Graduated in 2014
-
-              p
-                | Bordeaux Graduate School of Engineering in Computer Sciences
-                br
-                | Master degree in Software Engineering
-
-          h2 — Stuff I like
-
-          p.hobbies.
-            Swimming / Scuba-diving / Hiking / Reading / Movies / Skiing
+        include proficiency
+        
+        include education
