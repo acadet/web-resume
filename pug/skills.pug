@@ -1,66 +1,32 @@
+mixin skill(clazz, name)
+  li 
+    div(class=clazz)
+    p #{name}
+
 section.skills
   
   h2 – Skills
 
-  h4 I am using every day
-  ul.list
-    li
-      .android
-      p Android/JAVA
-    li
-      .coffeescript
-      p Coffeescript
-    li
-      .dbms
-      p DBMS
-    li
-      .html
-      p HTML/CSS
-    li
-      .javascript
-      p JavaScript
-    li
-      .ios
-      p Swift/iOS
+  .skillset
+    .set
+      h4 I am using every day
+      ul.list
+        +skill("android", "Android/Java")
+        +skill("experimentation", "Experimentation")
+        +skill("analytics", "Analytics")
+        +skill("dbms", "DBMS")
 
-  h4 I am pretty skilled for
-  ul.list
-    li
-      .go
-      p Go
-    li
-      .kotlin
-      p Kotlin
-    li
-      .rails
-      p Ruby/RoR
+    .set
+      h4 I am pretty skilled for
+      ul.list
+        +skill("sql", "SQL")
+        +skill("kotlin", "Kotlin")
+        +skill("web", "HTML/CSS/Javascript")
 
-  h4 I used to be good at
-  ul.list
-    li
-      .c
-      p C
-    li
-      .net
-      p C#/.NET
-    li
-      .codeigniter
-      p CodeIgniter
-    li
-      .php
-      p PHP
-    li
-      .python
-      p Python
-    li
-      .typescript
-      p TypeScript
-  
-  h4 Extra
-  ul.list
-    li
-      p Project Management
-    li
-      p Software engineering
-    li
-      p UX Design
+    .set
+      h4 I used to be good at
+      ul.list
+        +skill("ios", "Swift/iOS")
+        +skill("rails", "Ruby/RoR")
+        +skill("net", "C#/.NET")
+        +skill("php", "PHP")

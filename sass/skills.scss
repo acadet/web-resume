@@ -1,24 +1,43 @@
 .skills {
   h4 {
     margin: .5rem 1rem;
+    padding-bottom: 2px;
 
     font: {
       size: .9rem;
       weight: normal;
     }
     text-align: center;
+
+    border-bottom: 1px solid $grey;
+  }
+
+  .skillset {
+    @include display(flex);
+    @include flex-direction(row);
+    @include align-items(stretch);
+
+    .set {
+      @include flex(1);
+
+      border: 1px solid $grey;
+
+      &:nth-child(2) {
+        border-left-width: 0;
+        border-right-width: 0;
+      }
+    }
   }
 
   .list {
     margin: 0;
     padding: .5rem;
-    @include display(flex);
-    @include flex-wrap(wrap);
 
     list-style-type: none;
-    border: 1px solid $grey;
 
     li {
+      display: inline-block;
+      vertical-align: top;
       margin: .2rem 0;
       padding: 0;
 
