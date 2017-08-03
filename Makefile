@@ -1,14 +1,9 @@
-repo = https://github.com/acadet/web-resume
+src=../src/prod/
 
 all: clean build
 
 build:
-	git clone $(repo) src
-	cd src; npm install; bower install; grunt
-	cp -a src/build/. .
-	cp -a src/imgs/ imgs/
-	cp -a src/fonts/ fonts/
-	rm -rf src
+	cp -a $(src). ./
 
 clean:
-	rm -rf src/ index.html all.css all.js imgs/ fonts/
+	rm -rf fonts/ imgs/ *.html *.css *.js *.json *.ico *.xml *.pdf
