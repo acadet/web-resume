@@ -6,6 +6,7 @@
   width: 32px;
   height: 32px;
   margin: 1rem;
+  cursor: pointer;
 
   &:hover {
     opacity: .65;
@@ -101,30 +102,4 @@
       size: 1.2rem;
     }
   }
-}
-
-.resume .column {
-  padding: 0 1rem;
-
-  border-right: 1px solid $grey;
-
-  @media screen and (max-width: 1270px) {
-    border: none;
-  }
-
-  &:nth-child(2) {
-    @include flex(.7);
-  }
-
-  &:last-child {
-    border-right: none;
-  }
-
-
-
-
-
-
-
-
 }
