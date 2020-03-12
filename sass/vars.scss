@@ -8,6 +8,7 @@ $resume-height: 297mm;
 $white: #fff;
 $black: #232422;
 $grey: #eee;
+$dark-grey: #ccc;
 
 $skills-color: android #92C569,
   net #228C44,
@@ -21,3 +22,5 @@ $skills-color: android #92C569,
   kotlin #ACF0FF,
   php #5D6992,
   rails #722422;
+
+$transition: .2s ease;
