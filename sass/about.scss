@@ -44,13 +44,13 @@
   }
 
   a {
-    padding-bottom: 4px;
+    padding-bottom: 2px;
 
     color: inherit;
     text-decoration: none;
 
     border-bottom: 1px solid transparent;
-    @include transition(border-color .5s ease);
+    @include transition(border-color $transition);
 
     &:hover {
       border-color: $black;
