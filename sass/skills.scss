@@ -20,9 +20,8 @@
 
       border: 1px solid $grey;
 
-      &:nth-child(2) {
+      &:nth-child(2), &:nth-child(3) {
         border-left-width: 0;
-        border-right-width: 0;
       }
     }
   }
