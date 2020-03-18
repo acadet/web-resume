@@ -9,19 +9,23 @@
     }
 
     a {
-      color: $grey;
+      color: $dark-grey;
       text-decoration: none;
 
       border-bottom: 2px solid transparent;
-      @include transition(border-color .5s ease);
+      @include transition(border-color $transition, color $transition);
 
       &:hover, &:visited {
-        color: $grey;
         text-decoration: none;
       }
 
+      &:visited {
+        color: $dark-grey;
+      }
+
       &:hover {
-        border-color: $grey;
+        color: $black;
+        border-color: $black;
       }
 
       .highlight {
@@ -40,13 +44,13 @@
   }
 
   a {
-    padding-bottom: 4px;
+    padding-bottom: 2px;
 
     color: inherit;
     text-decoration: none;
 
     border-bottom: 1px solid transparent;
-    @include transition(border-color .5s ease);
+    @include transition(border-color $transition);
 
     &:hover {
       border-color: $black;

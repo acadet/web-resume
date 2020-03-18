@@ -8,16 +8,20 @@ $resume-height: 297mm;
 $white: #fff;
 $black: #232422;
 $grey: #eee;
+$dark-grey: #dbdbdb;
 
 $skills-color: android #92C569,
   net #228C44,
-  sql #DA6962,
+  product #DA6962,
   experimentation #305177,
-  dbms #912769,
+  data #912769,
   accessibility #B58032,
   web #DE5D36,
   ios #F3B35F,
-  analytics #E7E8DF,
-  kotlin #ACF0FF,
+  scaling #E7E8DF,
+  interviewing #ACF0FF,
   php #5D6992,
+   // #525252,
   rails #722422;
+
+$transition: .2s ease;
