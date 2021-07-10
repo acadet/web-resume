@@ -1,7 +1,8 @@
+const sass = require('node-sass');
+
 module.exports = function (grunt) {
     'use strict';
 
-    grunt.loadNpmTasks('grunt-contrib-coffee');
     grunt.loadNpmTasks('grunt-contrib-pug');
     grunt.loadNpmTasks('grunt-sass');
     grunt.loadNpmTasks('grunt-contrib-watch');
@@ -9,32 +10,8 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-copy');
 
-    var coffeeFiles = [
-        'coffee/FIXME.coffee',
-    ];
-
     // Project configuration
     grunt.initConfig({
-        coffee: {
-            dev: {
-                options: {
-                    bare: true,
-                    join: true
-                },
-                files: {
-                    'dev/all.js': coffeeFiles
-                }
-            },
-            prod: {
-                options: {
-                    bare: true,
-                    join: true
-                },
-                files: {
-                    'prod/all_original.js': coffeeFiles
-                }
-            }
-        },
         pug: {
             dev: {
                 options: {
@@ -56,7 +33,8 @@ module.exports = function (grunt) {
         sass: {
             dev: {
                 options: {
-                    sourcemap: 'none'
+                    sourcemap: 'none',
+                    implementation: sass,
                 },
                 files: {
                     'dev/all.css': 'sass/all.scss'
@@ -64,6 +42,7 @@ module.exports = function (grunt) {
             },
             prod: {
                 options: {
+                    implementation: sass,
                     sourcemap: 'none',
                     outputStyle: 'compressed'
                 },
@@ -73,14 +52,6 @@ module.exports = function (grunt) {
             }
         },
         watch: {
-            coffee: {
-                files: 'coffee/**/*.coffee',
-                tasks: ['coffee:dev'],
-                options: {
-                    interrupt: true,
-                    atBegin: true
-                }
-            },
             pug: {
                 files: 'pug/**/*.pug',
                 tasks: ['pug:dev'],
@@ -100,7 +71,7 @@ module.exports = function (grunt) {
         },
         concurrent: {
             dist: {
-                tasks: ['watch:coffee', 'watch:sass', 'watch:pug'],
+                tasks: ['watch:sass', 'watch:pug'],
                 options: {
                     logConcurrentOutput: true,
                     limit: 3
@@ -129,14 +100,12 @@ module.exports = function (grunt) {
     grunt.registerTask('default', 'concurrent');
 
     grunt.registerTask('dev', [
-        'coffee:dev',
         'pug:dev',
         'sass:dev',
         'copy:dev',
     ]);
 
     grunt.registerTask('prod', [
-        'coffee:prod',
         'pug:prod',
         'sass:prod',
         'copy:prod'
